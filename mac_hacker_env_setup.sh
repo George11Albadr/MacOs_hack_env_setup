@@ -19,61 +19,10 @@ install_cask() {
   fi
 }
 
-echo "\n🚀 Iniciando setup hacker pro de marait... \n"
+echo -e "\n🚀 Iniciando setup hacker pro de macOS... 👾💻\n"
 
 # 1) Instalamos Amethyst
 install_cask amethyst
-
-cat > ~/.amethyst << 'EOF'
----
-layouts:
-  - tall
-  - fullscreen
-  - column
-  - floating
-
-floating:
-  - "System Settings"
-  - "Terminal"
-
-focus-west:
-  modifiers: [option]
-  key: left
-focus-east:
-  modifiers: [option]
-  key: right
-focus-north:
-  modifiers: [option]
-  key: up
-focus-south:
-  modifiers: [option]
-  key: down
-
-swap-west:
-  modifiers: [option, shift]
-  key: left
-swap-east:
-  modifiers: [option, shift]
-  key: right
-swap-north:
-  modifiers: [option, shift]
-  key: up
-swap-south:
-  modifiers: [option, shift]
-  key: down
-
-grow:
-  modifiers: [option, control]
-  key: l
-shrink:
-  modifiers: [option, control]
-  key: h
-
-spawn:
-  modifiers: [option, shift]
-  key: n
-  command: open -a Terminal
-EOF
 
 # 2) 🔤 Tipografías "nerd" para prompts y banners
 install_formula fontconfig
